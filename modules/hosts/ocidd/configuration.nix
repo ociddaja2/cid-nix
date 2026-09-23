@@ -149,6 +149,7 @@
         wget
         btop
         foot
+        alacritty
         fastfetch
         spotify
         lazygit
@@ -160,6 +161,7 @@
         nwg-displays
         obsidian
         gh
+        discord
 
         nerd-fonts.jetbrains-mono
       ];

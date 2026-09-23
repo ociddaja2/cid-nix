@@ -34,6 +34,7 @@
 
         xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
         xdg.configFile."foot/foot.ini".source = ./foot.ini;
+        xdg.configFile."alacritty/alacritty.toml".source = "./alacritty.toml";
 
         programs.foot.enable = true;
         programs.fish = {

@@ -310,8 +310,8 @@ Mod+M hotkey-overlay-title="session-toggle" {
 
     // ===== App launchers =====
     Mod+E hotkey-overlay-title="File Manager" { spawn "nautilus"; }
-    Mod+T hotkey-overlay-title="Open Terminal" { spawn "foot"; }
-    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "foot"; }
+    Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+B repeat=false hotkey-overlay-title="Browser" { spawn "firefox"; }
     Mod+Shift+M hotkey-overlay-title="Manage Monitors" { spawn "nwg-displays"; }
 }
