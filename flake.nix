@@ -1,4 +1,7 @@
 {
+
+  description = "Ocid Belajar Nixos";
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -8,8 +11,8 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     home-manager = {
-	    url = "github:nix-community/home-manager";
-	    inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     noctalia = {
@@ -21,9 +24,11 @@
   };
 
   nixConfig = {
-  extra-substituters = [ "https://noctalia.cachix.org" ];
-  extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
   };
 
-  outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }

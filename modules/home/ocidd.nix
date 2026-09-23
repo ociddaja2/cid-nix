@@ -10,7 +10,6 @@
           config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/modules/home/nvim";
 
         home.packages = [
-          pkgs.dbeaver-bin
           pkgs.ripgrep
           pkgs.fd
           pkgs.unzip
@@ -33,10 +32,9 @@
         };
 
         xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
-        xdg.configFile."foot/foot.ini".source = ./foot.ini;
-        # xdg.configFile."alacritty/alacritty.toml".source = "./alacritty.toml";
+        # xdg.configFile."foot/foot.ini".source = ./foot.ini;
+        xdg.configFile."alacritty/alacritty.toml".source = "./alacritty.toml";
 
-        programs.foot.enable = true;
         programs.alacritty.enable = true;
         programs.fish = {
           enable = true;

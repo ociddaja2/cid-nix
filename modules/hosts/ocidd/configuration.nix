@@ -71,7 +71,7 @@
       ];
 
       # Desktop
-      services.displayManager.gdm.enable = true;
+      services.displayManager.ly.enable = true;
       services.desktopManager.gnome.enable = true;
       # services.xserver.xkb = {
       #   layout = "us";
@@ -98,7 +98,7 @@
 
       services.mysql = {
         enable = true;
-        package = pkgs.mysql84;
+        package = pkgs.mariadb;
       };
       systemd.services = {
         mysql.wantedBy = lib.mkForce [ ];
@@ -125,6 +125,7 @@
       programs.direnv = {
         enable = true;
         nix-direnv.enable = true;
+        enableFishIntegration = true;
       };
 
       programs.firefox.enable = true;
@@ -161,15 +162,14 @@
         nwg-displays
         obsidian
         gh
-        discord
 
         nerd-fonts.jetbrains-mono
       ];
 
       nix.gc = {
         automatic = true;
-        dates = "weekly"; # Bisa diisi waktu spesifik seperti "03:15" atau "daily" / "weekly"
-        options = "--delete-older-than 7d"; # Menghapus generasi/file yang lebih lama dari 30 hari
+        dates = "weekly";
+        options = "--delete-older-than 7d";
       };
 
       system.stateVersion = "26.05";
