@@ -37,6 +37,7 @@
         xdg.configFile."alacritty/alacritty.toml".source = "./alacritty.toml";
 
         programs.foot.enable = true;
+        programs.alacritty.enable = true;
         programs.fish = {
           enable = true;
           shellAliases = {
