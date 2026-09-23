@@ -1,0 +1,8 @@
+# Ignore plugin state logs or locally installed dependencies
+.deps/
+lazy-lock.json
+
+# Ignore temporary compiled spellfiles
+*.add.spl
+*.spl
+

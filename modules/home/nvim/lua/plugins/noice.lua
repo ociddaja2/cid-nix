@@ -1,0 +1,62 @@
+---@type LazySpec
+return {
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    opts = {
+      lsp = {
+        hover = { enabled = false },
+        signature = { enabled = false },
+        override = {
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
+          ["cmp.entry.get_documentation"] = true,
+        },
+      },
+      messages = {
+        enabled = true,
+        view = "mini",
+        opts = {},
+      },
+      cmdline = {
+        enabled = true,
+        view = "cmdline",
+        opts = {},
+        format = {
+          cmdline = { pattern = "^:", icon = ">", lang = "vim" },
+          search_direction = { pattern = "^/?", icon = "", lang = "regex" },
+          filter = { pattern = "^:%s*!", icon = "$", lang = "bash" },
+        },
+      },
+      popupmenu = {
+        enabled = true,
+        backend = "cmp", -- menggunakan UI dari nui untuk menampung completion
+      },
+      presets = {
+        bottom_search = true,
+        command_palette = true,
+        long_message_to_split = true,
+        inc_rename = false,
+      },
+      routes = {
+        {
+          filter = {
+            event = "msg_show",
+            any = {
+              { find = "%d+L, %d+B" },
+              { find = "; after #%d+" },
+              { find = "; before #%d+" },
+              { find = "written" },
+              { find = "search hit" },
+            },
+          },
+          opts = { skip = true },
+        },
+      },
+    },
+  },
+}
