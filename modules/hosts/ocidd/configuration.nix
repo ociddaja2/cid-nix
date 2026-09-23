@@ -166,6 +166,12 @@
         nerd-fonts.jetbrains-mono
       ];
 
+      nix.gc = {
+        automatic = true;
+        dates = "weekly"; # Bisa diisi waktu spesifik seperti "03:15" atau "daily" / "weekly"
+        options = "--delete-older-than 7d"; # Menghapus generasi/file yang lebih lama dari 30 hari
+      };
+
       system.stateVersion = "26.05";
       fonts.fontconfig.enable = true;
     };

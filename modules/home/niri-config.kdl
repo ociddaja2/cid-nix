@@ -192,10 +192,10 @@ XF86MonBrightnessDown allow-when-locked=true {
     spawn "noctalia" "msg" "brightness-down";
 }
 Mod+Backslash hotkey-overlay-title="wallpaper-widget" {
-    spawn-sh "noctalia" "msg" "panel-toggle" "ashur-d/wallpaper-widget:hub"
+    spawn-sh "noctalia msg panel-toggle ashur-d/wallpaper-widget:hub"
 }
 Mod+M hotkey-overlay-title="session-toggle" {
-    spawn-sh "noctalia" "msg" "panel-toggle" "session"
+    spawn-sh "noctalia msg panel-toggle session"
 }
 
     // ===== Workspaces =====
