@@ -160,7 +160,7 @@ Mod+Comma hotkey-overlay-title="Settings" {
     spawn "noctalia" "msg" "settings-toggle";
 }
 
-Mod+V hotkey-overlay-title="Clipboard" {
+Mod+Ctrl+V hotkey-overlay-title="Clipboard" {
     spawn "noctalia" "msg" "panel-toggle" "clipboard";
 }
 
@@ -277,8 +277,7 @@ Mod+M hotkey-overlay-title="session-toggle" {
     Mod+Ctrl+R { reset-window-height; }
     Mod+Period { expel-window-from-column; }
     Mod+W repeat=false { close-window; }
-    Mod+Shift+T { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+V { toggle-window-floating; }
 
     // ===== Multi-monitor =====
     Mod+Ctrl+H { focus-monitor-left; }

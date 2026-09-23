@@ -18,6 +18,9 @@
           pkgs.wl-clipboard
           pkgs.cliphist
           pkgs.playerctl
+          pkgs.gcc
+          pkgs.gnumake
+          pkgs.python3
         ];
 
         home.pointerCursor = {
