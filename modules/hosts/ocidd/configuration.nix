@@ -71,7 +71,7 @@
       ];
 
       # Desktop
-      services.displayManager.ly.enable = true;
+      services.displayManager.gdm.enable = true;
       services.desktopManager.gnome.enable = true;
       # services.xserver.xkb = {
       #   layout = "us";
@@ -100,6 +100,17 @@
         enable = true;
         package = pkgs.mariadb;
       };
+
+      services.nginx = {
+        enable = true;
+        virtualHosts."adminer.local" = {
+          root = "${pkgs.adminer}";
+          index = "adminer.php";
+          # Konfigurasi PHP-FPM jika diperlukan
+
+        };
+      };
+
       systemd.services = {
         mysql.wantedBy = lib.mkForce [ ];
         cloudflare-warp.wantedBy = lib.mkForce [ ];
@@ -162,6 +173,7 @@
         nwg-displays
         obsidian
         gh
+        adminer
 
         nerd-fonts.jetbrains-mono
       ];

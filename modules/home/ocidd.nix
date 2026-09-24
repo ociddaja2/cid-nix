@@ -12,7 +12,6 @@
         home.packages = [
           pkgs.ripgrep
           pkgs.fd
-          pkgs.unzip
           pkgs.tree-sitter
           pkgs.wl-clipboard
           pkgs.cliphist
@@ -21,6 +20,8 @@
           pkgs.gnumake
           pkgs.python3
           pkgs.luarocks
+          pkgs.lua5-1
+          pkgs.adminer
         ];
 
         home.pointerCursor = {
