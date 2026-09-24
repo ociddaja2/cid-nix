@@ -139,6 +139,7 @@
         description = "ocidd";
         extraGroups = [
           "networkmanager"
+          "adbusers"
           "wheel"
         ];
         packages = with pkgs; [ ];
@@ -192,6 +193,7 @@
         obsidian
         gh
         adminer
+        android-tools
 
         nerd-fonts.jetbrains-mono
       ];

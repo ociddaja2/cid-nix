@@ -23,6 +23,7 @@
           pkgs.luarocks
           pkgs.lua5_1
           pkgs.adminer
+          pkgs.scrcpy
         ];
 
         home.pointerCursor = {
