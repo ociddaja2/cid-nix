@@ -29,8 +29,8 @@
 
         plymouth = {
           enable = true;
-          themePackages = [ inputs.evangelion-ui.packages.${pkgs.system}.evangelion-ui ];
-          theme = "evangelion-ui";
+          themePackages = [ inputs.MikuPlymouth.packages.${pkgs.system}.MikuPlymouth ];
+          theme = "MikuPlymouth";
         };
 
         initrd = {
@@ -125,7 +125,7 @@
       programs.direnv = {
         enable = true;
         nix-direnv.enable = true;
-        enableFishIntegration = true;
+        # enableFishIntegration = true;
       };
 
       programs.firefox.enable = true;

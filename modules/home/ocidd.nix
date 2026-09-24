@@ -20,6 +20,7 @@
           pkgs.gcc
           pkgs.gnumake
           pkgs.python3
+          pkgs.luarocks
         ];
 
         home.pointerCursor = {
@@ -33,7 +34,7 @@
 
         xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
         # xdg.configFile."foot/foot.ini".source = ./foot.ini;
-        xdg.configFile."alacritty/alacritty.toml".source = "./alacritty.toml";
+        # xdg.configFile."alacritty/alacritty.toml".source = "./alacritty.toml";
 
         programs.alacritty.enable = true;
         programs.fish = {
@@ -60,6 +61,7 @@
 
             enabledExtensions = with spicePkgs.extensions; [
               adblock
+              romajiConvert
             ];
 
             # theme = spicePkgs.themes.text;

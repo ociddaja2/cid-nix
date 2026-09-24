@@ -19,8 +19,8 @@
       url = "github:noctalia-dev/noctalia";
     };
 
-    evangelion-ui.url = "gitlab:lobstermane/evangelion-ui-plymouth";
-    evangelion-ui.inputs.nixpkgs.follows = "nixpkgs";
+    MikuPlymouth.url = "github:Thang1191/MikuPlymouth";
+    MikuPlymouth.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   nixConfig = {

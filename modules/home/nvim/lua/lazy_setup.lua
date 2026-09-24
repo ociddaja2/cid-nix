@@ -14,6 +14,7 @@ require("lazy").setup({
   { import = "community" },
   { import = "plugins" },
   -- { import = "polish.lua" },
+  rocks = { enabled = false },
 } --[[@as LazySpec]], {
   -- Configure any other `lazy.nvim` configuration options here
   install = { colorscheme = { "astrodark", "habamax" } },
