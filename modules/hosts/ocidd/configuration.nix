@@ -29,7 +29,7 @@
 
         plymouth = {
           enable = true;
-          themePackages = [ inputs.MikuPlymouth.packages.${pkgs.system}.MikuPlymouth ];
+          themePackages = [ inputs.MikuPlymouth.packages.${pkgs.system}.default ];
           theme = "MikuPlymouth";
         };
 
