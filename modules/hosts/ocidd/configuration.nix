@@ -193,7 +193,9 @@
         gh
         adminer
         android-tools
-        protonup-ng
+        protonup-qt
+        xwayland
+        xwayland-satellite
 
         nerd-fonts.jetbrains-mono
       ];
