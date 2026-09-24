@@ -103,11 +103,28 @@
 
       services.nginx = {
         enable = true;
-        virtualHosts."adminer.local" = {
-          root = "${pkgs.adminer}";
-          index = "adminer.php";
-          # Konfigurasi PHP-FPM jika diperlukan
+        virtualHosts."localhost" = {
+          locations."/" = {
+            root = "${pkgs.adminer}";
+            index = "adminer.php";
+            extraConfig = ''
+              fastcgi_pass unix:/run/phpfpm/adminer.sock;
+              fastcgi_index adminer.php;
+              include ${pkgs.nginx}/conf/fastcgi_params;
+              fastcgi_param SCRIPT_FILENAME ${pkgs.adminer}/adminer.php;
+            '';
+          };
+        };
+      };
 
+      services.phpfpm.pools.adminer = {
+        user = "nginx";
+        settings = {
+          "pm" = "dynamic";
+          "pm.max_children" = 5;
+          "pm.start_servers" = 2;
+          "pm.min_spare_servers" = 1;
+          "pm.max_spare_servers" = 3;
         };
       };
 
@@ -180,7 +197,7 @@
 
       nix.gc = {
         automatic = true;
-        dates = "weekly";
+        dates = "daily";
         options = "--delete-older-than 7d";
       };
 

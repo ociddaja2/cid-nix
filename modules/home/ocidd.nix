@@ -20,7 +20,7 @@
           pkgs.gnumake
           pkgs.python3
           pkgs.luarocks
-          pkgs.lua5-1
+          pkgs.lua5_1
           pkgs.adminer
         ];
 
