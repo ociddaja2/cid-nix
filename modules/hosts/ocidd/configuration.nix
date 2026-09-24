@@ -94,8 +94,7 @@
         pulse.enable = true;
       };
 
-      services.cloudflare-warp.enable = true;
-
+      # Development
       services.mysql = {
         enable = true;
         package = pkgs.mariadb;
@@ -194,6 +193,7 @@
         gh
         adminer
         android-tools
+        protonup
 
         nerd-fonts.jetbrains-mono
       ];
@@ -202,6 +202,51 @@
         automatic = true;
         dates = "daily";
         options = "--delete-older-than 7d";
+      };
+
+      # Gaming
+      hardware.opengl.enable = {
+        enable = true;
+        driSupport = true;
+        driSupport32Bit = true;
+      };
+
+      services.xserver.videoDrivers = [ "nvidia" ];
+      hardware.nvidia = {
+        modesetting.enable = true;
+        # # Konfigurasi Prime Offload
+        prime = {
+          offload = {
+            enable = true;
+            enableOffloadCmd = true;
+          };
+
+          intelBusId = "PCI:0:2:0";
+          nvidiaBusId = "PCI:1:0:0";
+        };
+
+        specialisation = {
+          gametime.configuration = {
+            hardware.nvidia = {
+              prime.sync.enable = lib.mkForce true;
+              prime.offload = {
+                enable = lib.mkForce false;
+                enableOffloadCmd = lib.mkForce false;
+              };
+            };
+          };
+        };
+      };
+
+      programs.steam = {
+        enable = true;
+        gamescopeSession.enable = true;
+      };
+
+      programs.gamemode.enable = true;
+
+      environment.variables = {
+        STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/ocidd/.steam/root/compatibilitytools.d";
       };
 
       system.stateVersion = "26.05";

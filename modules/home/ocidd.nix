@@ -24,6 +24,7 @@
           pkgs.lua5_1
           pkgs.adminer
           pkgs.scrcpy
+          pkgs.lutris
         ];
 
         home.pointerCursor = {
