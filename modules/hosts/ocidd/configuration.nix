@@ -193,7 +193,7 @@
         gh
         adminer
         android-tools
-        protonup
+        protonup-ng
 
         nerd-fonts.jetbrains-mono
       ];
@@ -205,14 +205,14 @@
       };
 
       # Gaming
-      hardware.opengl.enable = {
+      hardware.graphics = {
         enable = true;
-        driSupport = true;
-        driSupport32Bit = true;
+        enable32Bit = true;
       };
 
       services.xserver.videoDrivers = [ "nvidia" ];
       hardware.nvidia = {
+        open = true;
         modesetting.enable = true;
         # # Konfigurasi Prime Offload
         prime = {
@@ -223,18 +223,6 @@
 
           intelBusId = "PCI:0:2:0";
           nvidiaBusId = "PCI:1:0:0";
-        };
-
-        specialisation = {
-          gametime.configuration = {
-            hardware.nvidia = {
-              prime.sync.enable = lib.mkForce true;
-              prime.offload = {
-                enable = lib.mkForce false;
-                enableOffloadCmd = lib.mkForce false;
-              };
-            };
-          };
         };
       };
 
