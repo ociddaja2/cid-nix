@@ -5,7 +5,7 @@ return {
     lazy = false,
     opts = {
       timeout = 1,
-      maxkeys = 1,
+      maxkeys = 5,
       position = "top-right",
       -- more opts
     },

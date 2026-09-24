@@ -10,6 +10,7 @@
           config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/modules/home/nvim";
 
         home.packages = [
+          pkgs.dbeaver-bin
           pkgs.ripgrep
           pkgs.fd
           pkgs.tree-sitter

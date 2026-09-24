@@ -14,9 +14,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.colorscheme" },
   { import = "astrocommunity.scrolling.cinnamon-nvim" },
-  -- { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
 
   -- import/override with your plugins folder
-  { import = "plugins" },
 }

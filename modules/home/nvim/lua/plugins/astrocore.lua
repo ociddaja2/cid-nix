@@ -3,17 +3,6 @@ return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
-    -- cmp configuration
-    cmp = {
-      cmdline = {
-        enabled = true, -- enable cmp in command line
-        options = {
-          -- options for cmp in command line
-          -- see `:h cmp-cmdline` for more details
-        },
-      },
-    },
-
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
@@ -60,12 +49,6 @@ return {
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
       -- first key is the mode
-      x = {
-        ["<Leader>F"] = {
-          '<Esc>"fyiw<CR>gv:s/<C-r>f/<C-r>f/g<Left><Left>',
-          desc = "Find and replace visual",
-        },
-      },
       n = {
         -- second key is the lefthand side of the map
 
@@ -81,11 +64,6 @@ return {
             )
           end,
           desc = "Close buffer from tabline",
-        },
-
-        ["<Leader>F"] = {
-          ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/g<Left><Left>",
-          desc = "Find and replace",
         },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
