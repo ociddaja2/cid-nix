@@ -27,20 +27,20 @@ require "lazy_setup"
 require "polish"
 
 -- Autocommand untuk membuat background transparan
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
-  callback = function()
-    local hl_groups = {
-      "Normal",
-      "NormalFloat",
-      "NormalNC",
-      "NvimTreeNormal",
-      "NvimTreeNormalNC",
-      "NeoTreeNormal",
-      "NeoTreeNormalNC",
-    }
-    for _, group in ipairs(hl_groups) do
-      vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-    end
-  end,
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   pattern = "*",
+--   callback = function()
+--     local hl_groups = {
+--       "Normal",
+--       "NormalFloat",
+--       "NormalNC",
+--       "NvimTreeNormal",
+--       "NvimTreeNormalNC",
+--       "NeoTreeNormal",
+--       "NeoTreeNormalNC",
+--     }
+--     for _, group in ipairs(hl_groups) do
+--       vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+--     end
+--   end,
+-- })
