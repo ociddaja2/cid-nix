@@ -33,7 +33,7 @@
           x11.enable = true;
           package = pkgs.adwaita-icon-theme;
           name = "Adwaita";
-          size = 10;
+          size = 12;
         };
 
         xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;

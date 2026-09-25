@@ -178,7 +178,6 @@
         vim
         wget
         btop
-        foot
         alacritty
         fastfetch
         spotify
@@ -226,11 +225,6 @@
           intelBusId = "PCI:0:2:0";
           nvidiaBusId = "PCI:1:0:0";
         };
-      };
-
-      programs.steam = {
-        enable = true;
-        gamescopeSession.enable = true;
       };
 
       programs.gamemode.enable = true;
