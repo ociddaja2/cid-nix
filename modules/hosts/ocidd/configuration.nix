@@ -27,6 +27,14 @@
         };
         kernelPackages = pkgs.linuxPackages_latest;
 
+        extraModulePackages = with config.boot.kernelPackages; [
+          msi-ec
+        ];
+
+        kernelModules = [
+          "msi_ec"
+        ];
+
         plymouth = {
           enable = true;
           themePackages = [ inputs.MikuPlymouth.packages.${pkgs.system}.default ];
@@ -195,6 +203,8 @@
         protonup-qt
         xwayland
         xwayland-satellite
+        mpvpaper
+        mcontrolcenter
 
         nerd-fonts.jetbrains-mono
       ];
