@@ -153,21 +153,22 @@
         shell = pkgs.fish;
       };
 
-      programs.neovim = {
-        enable = true;
-        defaultEditor = true;
+      # Programs
+      programs = {
+        neovim.enable = true;
+        neovim.defaultEditor = true;
+
+        fish.enable = true;
+
+        direnv.enable = true;
+        direnv.nix-direnv.enable = true;
+
+        firefox.enable = true;
+
+        nix-ld.enable = true;
+
+        gamemode.enable = true;
       };
-      programs.fish.enable = true;
-
-      programs.direnv = {
-        enable = true;
-        nix-direnv.enable = true;
-        # enableFishIntegration = true;
-      };
-
-      programs.firefox.enable = true;
-
-      programs.nix-ld.enable = true;
 
       nixpkgs.config.allowUnfree = true;
 
@@ -236,8 +237,6 @@
           nvidiaBusId = "PCI:1:0:0";
         };
       };
-
-      programs.gamemode.enable = true;
 
       environment.variables = {
         STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/ocidd/.steam/root/compatibilitytools.d";
