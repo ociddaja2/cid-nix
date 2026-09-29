@@ -189,6 +189,7 @@
         btop
         alacritty
         fastfetch
+        freshfetch
         spotify
         lazygit
         cava
