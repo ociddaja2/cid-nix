@@ -25,7 +25,6 @@
           pkgs.adminer
           pkgs.scrcpy
           pkgs.lutris
-          pkgs.google-play
         ];
 
         home.pointerCursor = {

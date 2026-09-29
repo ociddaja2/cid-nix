@@ -108,34 +108,6 @@
         package = pkgs.mariadb;
       };
 
-      services.nginx = {
-        enable = true;
-        virtualHosts."localhost" = {
-          locations."/" = {
-            root = "${pkgs.adminer}";
-            index = "adminer.php";
-            extraConfig = ''
-              fastcgi_pass 127.0.0.1:9000;
-              fastcgi_index adminer.php;
-              include ${pkgs.nginx}/conf/fastcgi_params;
-              fastcgi_param SCRIPT_FILENAME ${pkgs.adminer}/adminer.php;
-            '';
-          };
-        };
-      };
-
-      services.phpfpm.pools.adminer = {
-        user = "nginx";
-        settings = {
-          "listen" = "127.0.0.1:9000";
-          "pm" = "dynamic";
-          "pm.max_children" = 5;
-          "pm.start_servers" = 2;
-          "pm.min_spare_servers" = 1;
-          "pm.max_spare_servers" = 3;
-        };
-      };
-
       systemd.services = {
         mysql.wantedBy = lib.mkForce [ ];
         cloudflare-warp.wantedBy = lib.mkForce [ ];
