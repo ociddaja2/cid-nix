@@ -36,7 +36,7 @@
         ];
 
         plymouth = {
-          enable = true;
+          enable = false;
           themePackages = [ inputs.MikuPlymouth.packages.${pkgs.system}.default ];
           theme = "MikuPlymouth";
         };
