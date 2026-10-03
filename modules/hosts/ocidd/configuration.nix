@@ -226,6 +226,8 @@
         enable32Bit = true;
       };
 
+      hardware.steam-hardware.enable = true;
+
       services.xserver.videoDrivers = [ "nvidia" ];
       hardware.nvidia = {
         open = true;
