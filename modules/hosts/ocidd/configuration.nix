@@ -136,6 +136,8 @@
         };
       };
 
+      services.cloudflare-warp.enable = true;
+
       systemd.services = {
         mysql.wantedBy = lib.mkForce [ ];
         cloudflare-warp.wantedBy = lib.mkForce [ ];
