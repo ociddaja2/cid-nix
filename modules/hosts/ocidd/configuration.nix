@@ -29,11 +29,17 @@
 
         extraModulePackages = with config.boot.kernelPackages; [
           msi-ec
+          v4l2loopback
         ];
 
         kernelModules = [
           "msi_ec"
+          "v4l2loopback"
         ];
+
+        extraModprobeConfig = ''
+          options v4l2loopback devices=1 card_label="OBS Virtual Camera" exclusive_caps=1
+        '';
 
         plymouth = {
           enable = false;
@@ -245,11 +251,6 @@
           nvidiaBusId = "PCI:1:0:0";
         };
       };
-
-      environment.variables = {
-        STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/ocidd/.steam/root/compatibilitytools.d";
-      };
-
       system.stateVersion = "26.05";
       fonts.fontconfig.enable = true;
     };
