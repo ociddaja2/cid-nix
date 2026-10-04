@@ -198,6 +198,7 @@
         wget
         btop
         alacritty
+        kitty
         fastfetch
         freshfetch
         spotify
