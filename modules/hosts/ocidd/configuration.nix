@@ -176,6 +176,7 @@
         nix-ld.enable = true;
 
         gamemode.enable = true;
+        gamescope.enable = true;
       };
 
       services.tailscale.enable = true;

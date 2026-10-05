@@ -25,6 +25,7 @@
           pkgs.adminer
           pkgs.scrcpy
           pkgs.lutris
+          pkgs.heroic
           pkgs.vscodium
         ];
 
