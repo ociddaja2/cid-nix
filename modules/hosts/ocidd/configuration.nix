@@ -202,6 +202,7 @@
         kitty
         fastfetch
         freshfetch
+        inotify-tools
         spotify
         lazygit
         cava

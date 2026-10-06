@@ -32,17 +32,17 @@ return {
         end
 
         -- make ALL highlight groups transparent (bg only) -- command if you didnt like transparent bg
-        for _, name in ipairs(vim.fn.getcompletion("", "highlight")) do
-          local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = name, link = false })
-          if ok and hl and next(hl) ~= nil then
-            ---@diagnostic disable-next-line: assign-type-mismatch
-            hl.bg = "none"
-            ---@diagnostic disable-next-line: assign-type-mismatch
-            hl.ctermbg = "none"
-            ---@diagnostic disable-next-line: param-type-mismatch
-            vim.api.nvim_set_hl(0, name, hl)
-          end
-        end
+        -- for _, name in ipairs(vim.fn.getcompletion("", "highlight")) do
+        --   local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = name, link = false })
+        --   if ok and hl and next(hl) ~= nil then
+        --     ---@diagnostic disable-next-line: assign-type-mismatch
+        --     hl.bg = "none"
+        --     ---@diagnostic disable-next-line: assign-type-mismatch
+        --     hl.ctermbg = "none"
+        --     ---@diagnostic disable-next-line: param-type-mismatch
+        --     vim.api.nvim_set_hl(0, name, hl)
+        --   end
+        -- end
 
         -- restore the useful groups (selection, search, etc.)
         for name, hl in pairs(saved) do
