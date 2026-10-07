@@ -9,7 +9,7 @@ config-notification {
 
 gestures {
     hot-corners {
-        top-left
+        off
     }
 }
 
@@ -300,7 +300,7 @@ Mod+M hotkey-overlay-title="session-toggle" {
     Mod+Shift+P { power-off-monitors; }
 
     // ===== System / misc =====
-    Mod+Shift+E { quit; }
+    // Mod+Shift+E { quit; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+O repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
