@@ -35,6 +35,7 @@
         kernelModules = [
           "msi_ec"
           "v4l2loopback"
+          "ntsync"
         ];
 
         extraModprobeConfig = ''
@@ -213,6 +214,7 @@
         nwg-displays
         obsidian
         gh
+        gamemode
         adminer
         android-tools
         protonup-qt
