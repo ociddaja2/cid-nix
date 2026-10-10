@@ -200,20 +200,22 @@
         wget
         btop
         alacritty
-        kitty
+        foot
         fastfetch
-        freshfetch
+        neofetch
         inotify-tools
         spotify
         lazygit
         cava
+        unimatrix
         cloudflare-warp
-        vesktop
+        discord
         bruno
         unzip
         nwg-displays
         obsidian
         gh
+        github-desktop
         gamemode
         adminer
         android-tools
@@ -222,7 +224,7 @@
         xwayland-satellite
         mpvpaper
         obs-studio
-        mcontrolcenter
+        qemu
 
         nerd-fonts.jetbrains-mono
       ];

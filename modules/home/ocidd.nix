@@ -22,12 +22,13 @@
           pkgs.python3
           pkgs.luarocks
           pkgs.lua5_1
-          pkgs.adminer
           pkgs.scrcpy
           pkgs.lutris
           pkgs.heroic
+          pkgs.mcontrolcenter
           pkgs.vscodium
-          pkgs.virtualbox
+
+          pkgs.google-fonts
         ];
 
         home.pointerCursor = {
