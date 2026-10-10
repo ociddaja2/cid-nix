@@ -92,7 +92,8 @@ animations {
         spring damping-ratio=0.75 stiffness=500 epsilon=0.0001
     }
     window-open {
-        spring damping-ratio=0.65 stiffness=600 epsilon=0.0001
+        duration-ms 150
+        curve "cubic-bezier" 0.05 0.7 0.1 1
     }
     window-close {
         duration-ms 150
