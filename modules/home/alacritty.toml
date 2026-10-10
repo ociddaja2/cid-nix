@@ -1,6 +1,6 @@
-# [import]
-# Impor tema warna (gantikan dank-theme.conf jika ada file toml tema)
-# - ~/.config/alacritty/dank-theme.toml
+# [general]
+# import = ["~/.config/alacritty/themes/noctalia.toml"]
+# import = ["~/.config/alacritty/theme-override.toml"]
 
 [font]
 size = 11.5

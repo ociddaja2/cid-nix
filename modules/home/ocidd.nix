@@ -27,6 +27,7 @@
           pkgs.lutris
           pkgs.heroic
           pkgs.vscodium
+          pkgs.virtualbox
         ];
 
         home.pointerCursor = {
@@ -39,7 +40,6 @@
         };
 
         xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
-        # xdg.configFile."foot/foot.ini".source = ./foot.ini;
         # xdg.configFile."alacritty/alacritty.toml".source = "./alacritty.toml";
 
         programs.alacritty.enable = true;

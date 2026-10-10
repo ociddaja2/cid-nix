@@ -86,7 +86,36 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-  slowdown 0.5
+    slowdown 1.2
+
+    custom-curve "bouncy" {
+        curve 0.18 0.89 0.32 1.25
+    }
+
+    window-move {
+        curve "bouncy"
+        duration-ms 450
+    }
+
+    window-open {
+        curve "bouncy"
+        duration-ms 400
+    }
+
+    window-close {
+        curve "bouncy"
+        duration-ms 350
+    }
+
+    workspace-switch {
+        curve "bouncy"
+        duration-ms 500
+    }
+
+    horizontal-view-movement {
+        curve "bouncy"
+        duration-ms 450
+    }
 }
 
 window-rule {
