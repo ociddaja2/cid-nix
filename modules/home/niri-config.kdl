@@ -9,7 +9,7 @@ config-notification {
 
 gestures {
     hot-corners {
-        off
+        top-left
     }
 }
 

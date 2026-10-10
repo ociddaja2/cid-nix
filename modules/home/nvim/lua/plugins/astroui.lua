@@ -31,7 +31,7 @@ return {
           if ok and hl and next(hl) ~= nil then saved[name] = hl end
         end
 
-        -- make ALL highlight groups transparent (bg only) -- command if you didnt like transparent bg
+        -- MEMBUAT BACKGROUND TRANSPARAN: Komentar (--) di bawah ini dihapus
         for _, name in ipairs(vim.fn.getcompletion("", "highlight")) do
           local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = name, link = false })
           if ok and hl and next(hl) ~= nil then
@@ -53,6 +53,16 @@ return {
         vim.api.nvim_set_hl(0, "IncSearch", { fg = "red", bg = "none" })
         vim.api.nvim_set_hl(0, "CurSearch", { fg = "red", bg = "none" })
         vim.api.nvim_set_hl(0, "Substitute", { fg = "red", bg = "none" })
+        -- Mencerahkan warna teks path/direktori
+        vim.api.nvim_set_hl(0, "Directory", { fg = "#7aa2f7", bold = true }) -- Ubah warna sesuai selera, contoh: Biru terang
+        -- Contoh untuk mencerahkan teks umum atau path
+        vim.api.nvim_set_hl(0, "Special", { fg = "#bb9af7" })
+        -- Tambahkan baris ini di dalam fungsi init = function() pada file astroui.lua Anda:
+
+        vim.api.nvim_set_hl(0, "NormalFloat", { fg = "#D3D3D3", bg = "none" })
+        vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#7aa2f7", bg = "none" })
+        vim.api.nvim_set_hl(0, "NonText", { fg = "#D3D3D3" })
+        vim.api.nvim_set_hl(0, "Comment", { fg = "#a9b1d6" }) -- Mencerahkan warna teks yang biasanya redup
         -- Spectre Highlighting (Tokyonight tuned)
         vim.api.nvim_set_hl(0, "SpectreSearch", { fg = "#e0af68", bg = "none" }) -- yellow
         vim.api.nvim_set_hl(0, "SpectreReplace", { fg = "#f7768e", bg = "none" }) -- soft red
@@ -66,7 +76,6 @@ return {
     },
     -- Icons can be configured throughout the interface
     icons = {
-      -- configure the loading of the lsp in the status line
       LSPLoading1 = "⠋",
       LSPLoading2 = "⠙",
       LSPLoading3 = "⠹",
