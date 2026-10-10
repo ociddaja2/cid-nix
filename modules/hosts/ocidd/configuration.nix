@@ -209,7 +209,7 @@
         cava
         unimatrix
         cloudflare-warp
-        discord
+        vesktop
         bruno
         unzip
         nwg-displays
