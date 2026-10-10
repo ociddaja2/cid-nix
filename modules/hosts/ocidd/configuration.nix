@@ -202,7 +202,7 @@
         alacritty
         foot
         fastfetch
-        neofetch
+        freshfetch
         inotify-tools
         spotify
         lazygit
