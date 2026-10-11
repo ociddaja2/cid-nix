@@ -25,7 +25,6 @@
           pkgs.scrcpy
           pkgs.lutris
           pkgs.heroic
-          pkgs.mcontrolcenter
           pkgs.vscodium
 
           pkgs.google-fonts

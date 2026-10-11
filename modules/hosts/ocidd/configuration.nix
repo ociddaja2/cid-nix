@@ -223,6 +223,7 @@
         xwayland
         xwayland-satellite
         mpvpaper
+        mcontrolcenter
         obs-studio
         qemu
 
