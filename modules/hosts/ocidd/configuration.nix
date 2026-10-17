@@ -178,6 +178,8 @@
 
         gamemode.enable = true;
         gamescope.enable = true;
+
+        kdeconnect.enable = true;
       };
 
       services.tailscale.enable = true;

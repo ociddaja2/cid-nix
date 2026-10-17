@@ -4,8 +4,8 @@ return {
     "vyfor/cord.nvim",
     opts = {
       editor = {
-        -- client = "1545768452340326471",
-        client = "neovim",
+        client = "1545768452340326471",
+        -- client = "neovim",
         icon = "https://c.tenor.com/X1pVDUSWmf4AAAAd/tenor.gif",
         tooltip = "A Text Editor :3",
       },
