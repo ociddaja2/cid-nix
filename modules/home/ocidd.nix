@@ -9,8 +9,7 @@
         home.file.".config/nvim".source =
           config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/modules/home/nvim";
 
-        home.packages = [
-          pkgs.dbeaver-bin
+        home.packages = [ 
           pkgs.ripgrep
           pkgs.fd
           pkgs.tree-sitter
@@ -26,6 +25,7 @@
           pkgs.lutris
           pkgs.heroic
           pkgs.vscodium
+          pkgs.osu-lazer-bin
 
           pkgs.google-fonts
         ];

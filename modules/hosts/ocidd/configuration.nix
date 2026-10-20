@@ -36,6 +36,7 @@
           "msi_ec"
           "v4l2loopback"
           "ntsync"
+          "ec_sys"
         ];
 
         extraModprobeConfig = ''
@@ -228,6 +229,7 @@
         mcontrolcenter
         obs-studio
         qemu
+        clock-rs
 
         nerd-fonts.jetbrains-mono
       ];
