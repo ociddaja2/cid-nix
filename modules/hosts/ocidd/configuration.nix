@@ -218,7 +218,6 @@
         nwg-displays
         obsidian
         gh
-        github-desktop
         gamemode
         adminer
         android-tools
@@ -230,6 +229,8 @@
         obs-studio
         qemu
         clock-rs
+        opencode-desktop
+        nodejs
 
         nerd-fonts.jetbrains-mono
       ];
