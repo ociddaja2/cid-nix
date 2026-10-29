@@ -231,6 +231,7 @@
         clock-rs
         opencode
         opencode-desktop
+        nodejs
 
         nerd-fonts.jetbrains-mono
       ];
