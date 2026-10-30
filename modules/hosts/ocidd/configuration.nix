@@ -50,13 +50,12 @@
         };
 
         initrd = {
-          systemd.enable = true;
+          # systemd.enable = false;
+          # verbose = false;
           # kernelModules = [ "amdgpu" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
         };
 
-        consoleLogLevel = 3;
-
-        initrd.verbose = false;
+        consoleLogLevel = 3;        
 
         kernelParams = [
           "quiet"
@@ -210,6 +209,8 @@
         spotify
         lazygit
         cava
+        libpulseaudio
+        alsa-lib
         unimatrix
         cloudflare-warp
         vesktop
@@ -218,7 +219,6 @@
         nwg-displays
         obsidian
         gh
-        github-desktop
         gamemode
         adminer
         android-tools
@@ -230,6 +230,9 @@
         obs-studio
         qemu
         clock-rs
+        opencode
+        opencode-desktop
+        nodejs
 
         nerd-fonts.jetbrains-mono
       ];

@@ -177,6 +177,18 @@ window-rule {
     match is-active=false
     opacity 0.90
 }
+window-rule {
+    match app-id=r#"^net-minecraftlauncher-XLauncher$"#
+    match title=r#"^TLegacy"#
+    match title=r#"^Legacy Launcher"#
+    
+    // Memaksa window berjalan floating agar popup Swing tidak misplace
+    open-floating true
+    
+    // Opsional: atur ukuran default jika diperlukan
+    default-column-width { fixed 900; }
+    default-window-height { fixed 600; }
+}
 
 debug {
     honor-xdg-activation-with-invalid-serial

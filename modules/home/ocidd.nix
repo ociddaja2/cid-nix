@@ -22,10 +22,8 @@
           pkgs.luarocks
           pkgs.lua5_1
           pkgs.scrcpy
-          pkgs.lutris
           pkgs.heroic
           pkgs.vscodium
-          pkgs.osu-lazer-bin
 
           pkgs.google-fonts
         ];
@@ -67,10 +65,9 @@
 
             enabledExtensions = with spicePkgs.extensions; [
               adblock
-              romajiConvert
             ];
 
-            # theme = spicePkgs.themes.text;
+            # theme = spicePkgs.themes.idk;
           };
       };
     };

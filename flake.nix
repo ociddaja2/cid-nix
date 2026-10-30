@@ -18,9 +18,6 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia";
     };
-
-    # MikuPlymouth.url = "github:Thang1191/MikuPlymouth";
-    # MikuPlymouth.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   nixConfig = {
