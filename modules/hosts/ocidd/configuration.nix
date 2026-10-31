@@ -86,7 +86,7 @@
       ];
 
       # Desktop
-      services.displayManager.gdm.enable = true;
+      services.displayManager.noctalia-greeter.enable = true;
       services.desktopManager.gnome.enable = true;
       # services.xserver.xkb = {
       #   layout = "us";
@@ -249,17 +249,11 @@
         enable32Bit = true;
       };
 
-      # environment.variables = {
-      #   # Hanya daftarkan Intel. Niri tidak akan bisa melihat NVIDIA sama sekali.
-      #   AQ_DRM_DEVICES = "/dev/dri/card1";
-      #   WLR_DRM_DEVICES = "/dev/dri/card1";
-      # };
-      #
       hardware.steam-hardware.enable = true;
 
       services.xserver.videoDrivers = [ "nvidia" ];
       hardware.nvidia = {
-        open = false;
+        open = true;
         modesetting.enable = true;
 
         powerManagement = {
