@@ -249,12 +249,24 @@
         enable32Bit = true;
       };
 
+      # environment.variables = {
+      #   # Hanya daftarkan Intel. Niri tidak akan bisa melihat NVIDIA sama sekali.
+      #   AQ_DRM_DEVICES = "/dev/dri/card1";
+      #   WLR_DRM_DEVICES = "/dev/dri/card1";
+      # };
+      #
       hardware.steam-hardware.enable = true;
 
       services.xserver.videoDrivers = [ "nvidia" ];
       hardware.nvidia = {
-        open = true;
+        open = false;
         modesetting.enable = true;
+
+        powerManagement = {
+          enable = true;
+          finegrained = true;
+        };
+
         # # Konfigurasi Prime Offload
         prime = {
           offload = {
