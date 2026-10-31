@@ -22,7 +22,7 @@
       boot = {
         loader = {
           systemd-boot.enable = true;
-          systemd-boot.configurationLimit = 10;
+          # systemd-boot.configurationLimit = 10;
           efi.canTouchEfiVariables = true;
         };
         kernelPackages = pkgs.linuxPackages_latest;
@@ -237,11 +237,11 @@
         nerd-fonts.jetbrains-mono
       ];
 
-      nix.gc = {
-        automatic = true;
-        dates = "daily";
-        options = "--delete-older-than 7d";
-      };
+      # nix.gc = {
+      #   automatic = true;
+      #   dates = "daily";
+      #   options = "--delete-older-than 7d";
+      # };
 
       # Gaming
       hardware.graphics = {
