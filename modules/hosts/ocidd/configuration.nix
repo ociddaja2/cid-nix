@@ -86,7 +86,7 @@
       ];
 
       # Desktop
-      services.displayManager.noctalia-greeter.enable = true;
+      services.displayManager.gdm.enable = true;
       services.desktopManager.gnome.enable = true;
       # services.xserver.xkb = {
       #   layout = "us";
@@ -185,6 +185,12 @@
       services.tailscale.enable = true;
 
       nixpkgs.config.allowUnfree = true;
+
+      hardware.bluetooth.enable = true;
+
+      services.power-profile-daemon.enable = true;
+
+      services.upower.enable = true;
 
       services.flatpak.enable = true;
 
