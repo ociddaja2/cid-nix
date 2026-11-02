@@ -208,15 +208,12 @@
         wget
         btop
         alacritty
-        foot
         fastfetch
         freshfetch
         inotify-tools
         spotify
         lazygit
         cava
-        libpulseaudio
-        alsa-lib
         unimatrix
         cloudflare-warp
         vesktop
@@ -236,18 +233,16 @@
         obs-studio
         qemu
         clock-rs
-        opencode
-        opencode-desktop
         nodejs
 
         nerd-fonts.jetbrains-mono
       ];
 
-      # nix.gc = {
-      #   automatic = true;
-      #   dates = "daily";
-      #   options = "--delete-older-than 7d";
-      # };
+      nix.gc = {
+        automatic = true;
+        dates = "daily";
+        options = "--delete-older-than 7d";
+      };
 
       # Gaming
       hardware.graphics = {
