@@ -22,9 +22,8 @@
           pkgs.luarocks
           pkgs.lua5_1
           pkgs.scrcpy
-          # pkgs.heroic
-          pkgs.vscodium
-
+          pkgs.code-cursor
+  
           pkgs.google-fonts
         ];
 

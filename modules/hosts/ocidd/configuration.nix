@@ -225,7 +225,6 @@
         gamemode
         adminer
         android-tools
-        protonup-qt
         xwayland
         xwayland-satellite
         mpvpaper
@@ -234,6 +233,7 @@
         qemu
         clock-rs
         nodejs
+        cloudflared
 
         nerd-fonts.jetbrains-mono
       ];
