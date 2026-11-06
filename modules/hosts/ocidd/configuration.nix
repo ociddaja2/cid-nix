@@ -233,6 +233,7 @@
         qemu
         clock-rs
         nodejs
+        protonup-qt
         cloudflared
 
         nerd-fonts.jetbrains-mono
