@@ -180,6 +180,11 @@
         gamescope.enable = true;
 
         kdeconnect.enable = true;
+
+        appimage = {
+          enable = true;
+          binfmt = true;
+        };
       };
 
       services.tailscale.enable = true;

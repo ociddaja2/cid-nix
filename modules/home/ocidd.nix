@@ -23,6 +23,7 @@
           pkgs.lua5_1
           pkgs.scrcpy
           pkgs.code-cursor
+          pkgs.lutris
   
           pkgs.google-fonts
         ];
